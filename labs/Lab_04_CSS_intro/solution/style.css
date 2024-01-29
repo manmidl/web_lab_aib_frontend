@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+}
+body {
+    min-width: 850px;
+    text-align: center;
+}
+h1, p {
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 35px;
+}
+h1 {
+    font-family: William, serif;
+    font-size: 31px;
+    text-transform: uppercase;
+    padding-top: 45px;
+    font-weight: normal;
+    color: white;
+    font-style: italic;
+}
+h2 {
+    font-family: Inter, sans-serif;
+    font-size: 31px;
+    color: white;
+    text-transform: uppercase;
+}
+h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      line-height: 18px;
+      font-weight: normal;
+      color: white;
+      margin: 0;
+      padding: 0;
+}
+p {
+    font-family: Inter, sans-serif;
+    text-align: center;
+}
+img {
+   alt: "Супер-пупер стильный код";
+   width: 210px;
+   height: 210px;
+   margin-bottom: 80px;
+}
+
+div {
+  text-align: center;
+  background-color: deepskyblue;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto 20px;
+}
