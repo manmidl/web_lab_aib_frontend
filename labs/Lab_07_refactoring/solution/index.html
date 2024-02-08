@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+   //№1
+   let a = prompt('var one');
+   let _ = prompt('var two');
+   if (a === _) {
+       console.log('equally')
+   } else{
+       console.log('not equal');
+   }
+   let b = 'world';
+   a += b;
+   console.log("Значение a: ", a);
+
+   //№2
+   let f = ['apple', 'strawberry', 'blueberry', 'raspberry', 'lemon'];
+
+   for (let i = 0; i < f.length; i++){
+       console.log( f[i] );
+   }
+   if (f[0] === 'apple') console.log('apple green');
+   if (f[1] === 'strawberry') console.log('strawberry red');
+   if (f[2] === 'blueberry') console.log('blueberry blue');
+   if (f[3] === 'raspberry') console.log('raspberry light red');
+   if (f[4] === 'lemon') console.log('lemon yellow');
+
+   //№3
+   let d = prompt('Введите кол-во человек: ', undefined);
+   let k = prompt('Введите зарплату на человека: ', undefined);
+
+   while(d === 0) {
+       if (!isNaN( parseFloat(d) ) || !isNaN( parseFloat(k) )) {
+           d = parseFloat(d);
+           k = parseFloat(k);
+       }else {
+           d = 0;
+           k = 0;
+       }
+   }
+   alert('Затраты на ЗП: ' + d * k);
+
+   //№4
+   let studentsClass = [
+       {FIO:'Петров А.А.', point: 5},
+       {FIO:'Иванов Б.Б.', point: 3.4},
+       {FIO:'Сидоров Г.Г.', point: 9},
+       {FIO:'Немолодой Д.Д', point: 2},
+       {FIO:'Молодой Е.Е', point: 3.4}
+   ];
+
+   let averageScore = 0;
+   let count = 0;
+   let badStudents = [];
+
+   for (let i = 0; i < studentsClass.length; i++) {
+       if (studentsClass[i].point > 5 || studentsClass[i].point < 0) {
+           console.log(`Это значение (${studentsClass[i].point}) учитываться не будет
+           оно не соответствует допустимым значениям`);
+       }
+       if (!((studentsClass[i].point <= 5) && (studentsClass[i].point >= 0))) {
+           continue;
+       }
+       if (studentsClass[i].point < 4){
+           badStudents.push(studentsClass[i])
+       }
+       averageScore += studentsClass[i].point;
+       count++;
+   }
+   averageScore /= count;
+   console.log('Средняя оценка: ', averageScore);
+   console.log('Плохие студенты: ');
+
+   if (badStudents.length === 0){
+       console.log('Таких нет');
+   }
+
+   badStudents.forEach((meaning) => {
+       console.log('Фио: ' + meaning.FIO + '; Оценка: ' + meaning.point)
+   });
+
+</script>
+</body>
+</html>

@@ -26,11 +26,11 @@
     console.log(bool + str);
 
     //№3
-    let array = []
+    let array = [];
     function randInt(min, max){
         return Math.floor(min + Math.random() * (max + 1 - min));
     }
-    for (let i = 0; i < 10; i++){
+    for (let i = 0; i < 10; i++) {
         array[i] = randInt(0, 99);
         console.log("Array : ", array[i]);
     }
@@ -41,9 +41,9 @@
     }
     console.log("Random number : ", randIntNum());
 
-    function arrAndNum(array, num){
+    function arrAndNum(array, num) {
         let resArr = [];
-        for(let i = 0; i < array.length; i++){
+        for (let i = 0; i < array.length; i++) {
             resArr.push(array[i] * num)
         }
         return resArr;
@@ -64,7 +64,7 @@
     objectPerson.hobby = "Drinking beer and wine and whiskey"
     objectPerson.group = "AIB-3-044";
 
-    objectPerson.getInfo = function(){
+    objectPerson.getInfo = function() {
         const birthDate = new Date(this.birthday);
         const age = "121";
         const hobby = this.hobby;
@@ -87,7 +87,7 @@
         Stanislav: 499593
     }
     let sumSalary = 0;
-    for(let key in salaries){
+    for (let key in salaries) {
         sumSalary += salaries[key];
     }
     console.log("Total salary: ", sumSalary)
